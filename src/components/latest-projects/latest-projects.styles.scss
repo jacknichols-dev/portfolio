@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+.latest {
+  position: relative;
+  height: 34vh;
+  mix-blend-mode: multiply;
+  background-image: $gra;
+
+  &__container {
+    width: 80rem;
+    margin: auto;
+    cursor: grab;  }
+
+  &__title {
+    transform: translateY(-5rem) !important;
+  }
+
+  &__projects {
+    display: flex;
+    margin: auto;
+  }
+}
+
+.swiper-container {
+  height: 22rem;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0 !important;
+}
+
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 1 !important;
+  border: 1px solid $hover;
+}
+
+.swiper-pagination-bullet-active {
+  color: $hover !important;
+  background-color: $hover !important;
+}
