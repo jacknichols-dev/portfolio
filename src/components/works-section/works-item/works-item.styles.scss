@@ -4,22 +4,50 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: calc(50rem - 2rem);
+  width: 45rem;
   margin: 4rem 2rem;
+  background-color: white;
+  box-shadow: $sha2;
+  transition: all .2s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $sha;
+  }
+
+  @include respond(laptop) {
+    width: 35rem;
+  }
+
+  @include respond(tab-port) {
+    width: 50rem;
+  }
 
   &__img-container {
     overflow: hidden;
     transform: scale(1);
     border: 2px solid $hover;
-    transition: all 0.2s ease;
-    height: 30vh;
+    transition: all 0.5s ease;
+    height: 28vh;
+
+    @include respond(tab-port) {
+      height: 31vh;
+    }
+
+    @include respond(phone-land) {
+      height: 31rem
+    }
+
+    @include respond(phone-port) {
+      height: 20rem;
+    }
 
     &:hover {
-      border-color: lighten($hover, 15%);
+      border-color: $sec;
 
       & .works-item__img {
-        transform: scale(1.02);
-        transition: all 0.3s ease-in;
+        transform: scale(1.05);
+        transition: all 0.5s ease-in-out;
       }
     }
   }
@@ -39,7 +67,12 @@
 
   &__prg {
     padding: 2rem;
-    color: $dark;
+    color: $hover;
+
+    @include respond(tab-land) {
+     padding: 2rem 0;
+     text-align: center;
+    }
   }
 
   &__info {
@@ -47,9 +80,10 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 1.5rem;
 
     &--title {
-      color: $dark;
+      color: $sec;
       font-family: $f2;
       font-size: 1.8rem;
     }
@@ -81,6 +115,7 @@
 
     &--links {
       display: flex;
+      padding: 2rem 0;
     }
   }
 }

@@ -10,7 +10,7 @@ export default function WorksSection(props) {
     return (
         <div className="works">
             <Title>All Works</Title>
-            <div className="works__section container">
+            <div className="works__section">
                 {
                     projects.map(({ img, title, icons, links, id, description }) => (
 

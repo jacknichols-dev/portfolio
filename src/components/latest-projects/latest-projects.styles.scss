@@ -2,14 +2,32 @@
 
 .latest {
   position: relative;
-  height: 34vh;
-  mix-blend-mode: multiply;
+  height: 30vh;
   background-image: $gra;
+  mix-blend-mode: multiply;
+  overflow: hidden;
+
+  @include respond(laptop) {
+    height: 37vh;
+  }
+
+  @include respond(tab-port) {
+    height: 28vh;
+  }
+
+  @include respond(phone-land) {
+    height: 28rem;
+  }
 
   &__container {
-    width: 80rem;
+    width: 80%;
     margin: auto;
-    cursor: grab;  }
+    cursor: grab;
+
+    @include respond(tab-port) {
+      width: 95%;
+    }
+  }
 
   &__title {
     transform: translateY(-5rem) !important;
@@ -22,11 +40,12 @@
 }
 
 .swiper-container {
-  height: 22rem;
+  height: 23rem;
 }
 
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 0 !important;
+  padding: 2rem 0 !important;
 }
 
 

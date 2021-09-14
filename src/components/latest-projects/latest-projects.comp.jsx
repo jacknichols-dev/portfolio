@@ -53,12 +53,22 @@ export default class LatestProjects extends Component {
         <div className="latest__container">
 
           <Swiper
-            spaceBetween={50}
+            spaceBetween={30}
             slidesPerView={3}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             pagination={{ clickable: true }}
-            autoplay={{ delay: 4000 }}
+            autoplay={{ delay: 3000 }}
+            breakpoints={{
+              // when window width is >= 640px
+              300: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 3,
+              },
+            }}
           >
             <div className="latest__projects">
               {this.state.projects.map(({ title, img, id }) => (

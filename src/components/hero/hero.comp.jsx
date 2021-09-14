@@ -22,6 +22,7 @@ const Hero = () => {
           <p>Digital Artist</p>
         </div>
       </div>
+      <div class="mouse"></div>
       <LatestProjects />
     </>
   );
