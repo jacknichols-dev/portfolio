@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 16rem;
-  transform: translateY(2.5rem);
+  transform: translateY(1.5rem);
 
   & p {
     padding-top: 1rem;
@@ -15,7 +15,7 @@
   &__img {
     height: 100%;
     border: 3px solid $hover;
-    border-radius: 2rem;
+
     cursor: pointer;
     transition: all .2s ease;
 

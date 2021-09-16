@@ -1,6 +1,10 @@
 @import 'variables.scss';
 .footer {
-    height: 70vh;
+    height: 100vh;
     background-color: $light;
-    padding: 8rem 0;
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

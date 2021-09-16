@@ -9,7 +9,7 @@ export const DataProvider = (props) => {
       img: "/assets/author-site.jpg",
       title: "Website",
       description:
-        "Website for an author. Lee Wood is a published crime fiction writer.",
+        "Commercial project built in React for a crime fiction author's website.",
       icons: [
         {
           img: "/assets/react-icon.png",
@@ -32,7 +32,7 @@ export const DataProvider = (props) => {
       id: 2,
       img: "/assets/coffee-site.jpg",
       title: "Website",
-      description: "Fictional website for a coffee shop.",
+      description: "Project which was more for practicing and learning new technologies.",
       icons: [
         {
           img: "/assets/html-icon.png",
@@ -62,7 +62,7 @@ export const DataProvider = (props) => {
       id: 3,
       img: "/assets/belfast-branding.jpg",
       title: "Branding",
-      description: "A commercial ecommerce web design for a local bed shop.",
+      description: "Branding project for a local furniture store.",
       icons: [
         {
           img: "/assets/ps-icon.png",
@@ -87,7 +87,7 @@ export const DataProvider = (props) => {
       img: "/assets/belfast-webdesign.jpg",
       title: "Web Design",
       description:
-        "This is a web design project I did for a local bed shop. Belfast beds.",
+        "Commercial ecommerce web design project for a local bed shop.",
       icons: [
         {
           img: "/assets/ps-icon.png",

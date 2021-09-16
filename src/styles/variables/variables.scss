@@ -11,7 +11,7 @@ $dark: #5d5e61;
 
 $gra: linear-gradient(to left, $pri 0%, $ter 50%, $sec 100%);
 
-//shadow
+//shadows
 
 $sha: 0 1rem 3rem rgba(0, 0, 0, 0.25);
 $sha2: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
@@ -26,15 +26,15 @@ $f2: 'Jura', cursive;
 @keyframes float {
   0% {
     box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
-    transform: translatey(0px) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
   50% {
     box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.1);
-    transform: translatey(-20px) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
   }
   100% {
     box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
-    transform: translatey(0px) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -50,47 +50,37 @@ $f2: 'Jura', cursive;
   }
 }
 
-//*****  Responsive breakpoint arguments  *****//
+//*****  breakpoint arguments  *****//
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone-port {
     @media only screen and (max-width: 37.5em) {
       @content;
-    } // 600px
+    }
   }
   @if $breakpoint == phone-land {
     @media only screen and (max-width: 53em) {
       @content;
-    } // 740px
+    }
   }
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 55em) {
       @content;
-    } // 900px
+    }
   }
   @if $breakpoint == tab-land {
     @media only screen and (max-width: 65em) {
       @content;
-    } // 1200px
+    }
   }
   @if $breakpoint == laptop {
     @media only screen and (max-width: 90em) {
       @content;
-    } // 1350px
+    }
   }
   @if $breakpoint == desktop {
-    @media only screen and (max-width: 90.6em) {
+    @media only screen and (max-width: 95em) {
       @content;
-    } // 1450px
-  }
-  @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 100em) {
-      @content;
-    } // 1800px
-  }
-  @if $breakpoint == bigger-desktop {
-    @media only screen and (min-width: 110em) {
-      @content;
-    } // 1800px
+    }
   }
 }

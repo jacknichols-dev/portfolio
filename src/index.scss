@@ -16,7 +16,7 @@ body {
   font-family: $f1;
   font-size: 1.5rem;
   font-weight: 600;
-  background-image: url(./assets/background-img.jpg);
+  background-image: url(./assets/background-img.png);
   background-size: contain;
   background-repeat: repeat;
 }
@@ -25,15 +25,20 @@ h1,
 h2,
 h3, h4, h5 {
   font-family: $f2;
+  color: $hover;
+  font-weight: bold;
 }
 
 .container {
   margin: 0 auto;
-  width: 80%;
-
+  width: 85%;
 
   @include respond(tab-land) {
     width: 93%;
+  }
+  
+  @include respond(tab-land) {
+    width: 96%;
   }
 }
 

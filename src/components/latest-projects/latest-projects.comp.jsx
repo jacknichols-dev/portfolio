@@ -8,7 +8,7 @@ import "swiper/swiper-bundle.css";
 
 import project1 from "../../assets/lee-author-screenshot.png";
 import project2 from "../../assets/coffee-screenshot.png";
-import project3 from "../../assets/belfast-branding-8.png";
+import project3 from "../../assets/belfast-web-design.png";
 import project4 from "../../assets/belfast-branding.png";
 import Title from "../title/title.comp";
 
@@ -44,42 +44,40 @@ export default class LatestProjects extends Component {
   }
   render() {
     return (
-      <div className="latest">
-        <Title>
-          <div className="latest__title">
-            Recent Projects
-          </div>
-        </Title>
-        <div className="latest__container">
-
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={3}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 3000 }}
-            breakpoints={{
-              // when window width is >= 640px
-              300: {
-                slidesPerView: 1,
-              },
-              // when window width is >= 768px
-              768: {
-                slidesPerView: 3,
-              },
-            }}
-          >
-            <div className="latest__projects">
-              {this.state.projects.map(({ title, img, id }) => (
-                <SwiperSlide>
-                  <LatestProjectItem key={id} title={title} img={img} />
-                </SwiperSlide>
-              ))}
+      <>
+        <div className="latest">
+          <div className="latest__container">
+            <div className="latest-title">
+              <h2>Latest projects</h2>
             </div>
-          </Swiper>
+
+            <Swiper
+              spaceBetween={0}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000 }}
+              breakpoints={{
+                400: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1100: {
+                  slidesPerView: 4,
+                },
+              }}
+            >
+              <div className="latest__projects">
+                {this.state.projects.map(({ title, img, id }) => (
+                  <SwiperSlide>
+                    <LatestProjectItem key={id} title={title} img={img} />
+                  </SwiperSlide>
+                ))}
+              </div>
+            </Swiper>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }

@@ -1,112 +1,37 @@
 @import "./variables.scss";
 
 .hero {
-  height: 65vh;
-  display: flex;
-  max-width: 100vw;
-
-
-  @include respond(tab-land) {
-    margin-bottom: 5rem;
-  }
-
-  @include respond(tab-port) {
-    height: 68vh;
-  }
+  height: 100vh;
 
   @include respond(phone-land) {
-    height: 30rem;
+    height: 38rem;
+    position: relative;
   }
 
   @include respond(phone-port) {
-    height: 65vh;
-  }
-
-  &__bubble {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    background-image: linear-gradient(to top left, #c79be457 20%, rgba(151, 221, 238, 0.349), white 50%);
-    mix-blend-mode: multiply;
-
-
-    &--1 {
-      height: 50rem;
-      width: 50rem;
-      transform: translate(-50%, -80%);
-
-      @include respond(tab-port) {
-        height: 40rem;
-        width: 40rem;
-        transform: translate(-50%, -81%);
-      }
-
-      @include respond(phone-port) {
-        display: none;
-      }
-    }
-    &--2 {
-      height: 20rem;
-      width: 20rem;
-      top: 20%;
-      left: 20%;
-      animation: bubble 25s ease-in-out infinite;
-      z-index: -1;
-
-      @include respond(tab-port) {
-        left: 5%;
-      }
-    }
-    &--3 {
-      height: 10rem;
-      width: 10rem;
-      top: 60%;
-      left: 20%;
-      animation: bubble 30s ease-in-out infinite;
-      mix-blend-mode: multiply;
-
-      @include respond(tab-land) {
-        left: 8%;
-      }
-
-      @include respond(tab-port) {
-        left: 15%;
-      }
-
-      @include respond(phone-port) {
-        top: 65vh;
-      }
-    }
-    &--4 {
-      height: 15rem;
-      width: 15rem;
-      top: 60%;
-      left: 80%;
-      animation: bubble 20s ease-in-out infinite;
-
-      @include respond(phone-port) {
-        right: 5%;
-        top: 50rem;
-      }
-    }
+    height: 100vh;
   }
 
   &__title {
     position: absolute;
     left: 50%;
-    top: 32%;
+    top: 27%;
     transform: translateX(-50%);
-    font-size: 6rem;
+    font-size: 4rem;
     color: $hover;
     text-align: center;
 
+    @include respond(tablet-port) {
+      top: 28%;
+    }
+
     @include respond(phone-land) {
-      top: 40%;
+      top: 38%;
     }
 
     @include respond(phone-port) {
-      top: 30%;
+      top: 23%;
+      width: 100%;
     }
   }
 }
@@ -114,80 +39,69 @@
 .skill-btn {
   color: $light;
   position: absolute;
+  display: inline;
   padding: 1rem 4rem;
   border-radius: 10rem;
   box-shadow: $sha;
   font-weight: bolder;
   font-size: 1.5rem;
-  transform: translate(-50%,-50%);
 
+  @include respond(tab-land) {
+    font-size: 1.3rem;
+  }
 
   &__1 {
-    top: 17rem;
-    left: 35rem;
+    top: 40%;
+    left: 30%;
     background-color: $pri;
     animation: float 5s ease-in-out infinite;
-    
-    @include respond(tab-land) {
-      left: 17rem
-    }
-    
-    @include respond(tab-port) {
-      left: 13rem
-    }
-    
+
     @include respond(phone-land) {
-      left: 4rem;
-      top: 9rem;
+      top: 66%;
     }
-    
+
     @include respond(phone-port) {
-      left: 7rem;
-      top: 12rem;
+      left: 50%;
+      width: 70%;
+      text-align: center;
+      top: 15%;
     }
   }
+
   &__2 {
-    top: 40rem;
-    left: 35rem;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: $sec;
     animation: float 4s ease-in-out infinite;
 
-        
-    @include respond(tab-port) {
-      top: 50rem;
-      left: 30rem;
-    }
-        
-    @include respond(tab-port) {
-      top: 29rem;
-      left: 10rem;
+    @include respond(phone-land) {
+      top: 26%;
     }
 
     @include respond(phone-port) {
-      right: 7rem;
-      top: 45rem;
+      left: 50%;
+      width: 70%;
+      text-align: center;
+      top: 37%;
     }
   }
 
   &__3 {
-    top: 30rem;
-    right: 30rem;
+    top: 40%;
+    left: 70%;
     background-color: $ter;
     animation: float 3s ease-in-out infinite;
 
-    @include respond(tab-land) {
-      right: 13rem
-    }
-
-    @include respond(tab-port) {
-      right: 10rem;
-      top: 25rem;
+    @include respond(phone-land) {
+      top: 66%;
     }
 
     @include respond(phone-port) {
-      right: 50%;
-      top: 20rem;
-    }
+      left: 50%;
+      width: 70%;
+      text-align: center;
+      top: 47%;    }
   }
 }
 
@@ -204,22 +118,28 @@
   left: 50%;
   top: 45%;
 
+  @include respond(laptop) {
+    top: 40%;
+  }
   @include respond(tab-land) {
-    top: 52%;
+    top: 40%;
   }
   @include respond(tab-port) {
-    top: 54%;
+    top: 54vh;
+  }
+  @include respond(phone-port) {
+    top: 47vh;
   }
 
 	&::before {
 		content: '';
-		width: 12px;
-		height: 12px;
+		width: 20px;
+		height: 20px;
 		position: absolute;
 		top: 10px;
 		left: 50%;
 		transform: translateX(-50%);
-		background-color: $hover;
+		background-color: $sec;
 		border-radius: 50%;
 		opacity: 1;
 		animation: wheel 2s infinite;

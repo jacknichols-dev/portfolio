@@ -4,10 +4,10 @@ import WorksSection from "../components/works-section/works-section.comp";
 
 const Home = () => {
   return (
-    <>
+    <div className="container">
       <Hero />
       <WorksSection />
-    </>
+    </div>
   );
 };
 

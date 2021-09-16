@@ -1,15 +1,15 @@
 @import "./variables.scss";
 
 .latest {
-  position: relative;
-  height: 30vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30rem;
   background-image: $gra;
   mix-blend-mode: multiply;
   overflow: hidden;
-
-  @include respond(laptop) {
-    height: 37vh;
-  }
+  width: 100vw;
+  display: flex;
 
   @include respond(tab-port) {
     height: 28vh;
@@ -17,20 +17,23 @@
 
   @include respond(phone-land) {
     height: 28rem;
+    position: relative;
+    width: 100%;
+  }
+
+  @include respond(phone-port) {
+    position: absolute;
   }
 
   &__container {
-    width: 80%;
+    width: 70%;
     margin: auto;
     cursor: grab;
+    height: 100%;
 
     @include respond(tab-port) {
       width: 95%;
     }
-  }
-
-  &__title {
-    transform: translateY(-5rem) !important;
   }
 
   &__projects {
@@ -40,12 +43,21 @@
 }
 
 .swiper-container {
-  height: 23rem;
+  height: 100%;
 }
 
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+  left: 50% !important;
+  width: 10rem !important;
   bottom: 0 !important;
-  padding: 2rem 0 !important;
+  background: rgba(225, 225, 225, 0.5);
+  padding: 1.5rem;
+  margin: auto;
+  border-radius: 2rem 2rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
 }
 
 
@@ -58,4 +70,27 @@
 .swiper-pagination-bullet-active {
   color: $hover !important;
   background-color: $hover !important;
+}
+
+.swiper-slide {
+  margin-right: 0 auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60rem;
+}
+
+.latest-title {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+
+  & h2 {
+    color: white;
+    transform: translateY(3rem);
+  }
+}
+
+.latest-container {
+  position: relative;
 }

@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 45rem;
-  margin: 4rem 2rem;
+  margin: 0 2rem 6rem 2rem;
   background-color: white;
   box-shadow: $sha2;
   transition: all .2s;
@@ -23,10 +23,15 @@
     width: 50rem;
   }
 
+  @include respond(phone-port) {
+    width: 35rem;
+    margin: 0 auto 3rem auto;
+  }
+
   &__img-container {
     overflow: hidden;
     transform: scale(1);
-    border: 2px solid $hover;
+    border: 2px solid transparent;
     transition: all 0.5s ease;
     height: 28vh;
 
@@ -40,15 +45,6 @@
 
     @include respond(phone-port) {
       height: 20rem;
-    }
-
-    &:hover {
-      border-color: $sec;
-
-      & .works-item__img {
-        transform: scale(1.05);
-        transition: all 0.5s ease-in-out;
-      }
     }
   }
 
@@ -68,6 +64,7 @@
   &__prg {
     padding: 2rem;
     color: $hover;
+    height: 8rem;
 
     @include respond(tab-land) {
      padding: 2rem 0;
@@ -78,19 +75,14 @@
   &__info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 1.5rem;
+    padding: 2rem;
 
     &--title {
       color: $sec;
       font-family: $f2;
       font-size: 1.8rem;
-    }
-
-    &--btn-icon {
-      padding-right: 1rem;
-      width: 3rem;
     }
 
     &--icons {
@@ -112,10 +104,10 @@
         }
       }
     }
-
-    &--links {
-      display: flex;
-      padding: 2rem 0;
-    }
   }
+
+  &:hover .works-item__img {
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
 }
